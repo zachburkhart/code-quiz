@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+    background-color: white;
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    height: 60px;
+    font-size: 2vw;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.btn {
+    grid-column: 2 / span 2;
+    grid-row: 5 / span 1;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10%;
+    border: 0;
+    outline: 0;
+    background-color: lightseagreen;
+    place-self: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.btnHeader {
+    background-color: white;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+.btnHeader:hover {
+    background-color: lightseagreen;
+}
+
+#mainDiv {
+    margin-left: 25%;
+    margin-right: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+#gridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 2fr 1fr;
+    grid-template-rows: repeat(10, 1fr);
+    gap: 10px 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+#questionDisplay {
+    text-align: center;
+    align-self: baseline;
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 5;
+    place-self: center;
+    font-size: 28px;
+}
+
+#answer1 {
+    grid-row: 6 / span 1;
+    justify-content: center;
+}
+
+#answer2 {
+    grid-row: 7 / span 1;
+    justify-content: center;
+}
+
+#answer3 {
+    grid-row: 8 / span 1;
+    justify-content: center;
+}
+
+#answer4 {
+    grid-row: 9 / span 1;
+    justify-content: center;
+}
+
+#enterInitials {
+    grid-column: 1 / span 1;
+    grid-row: 7 / span 1;
+    font-size: 20px;
+}
+
+#finalScoreDisplay {
+    grid-column: 1 / span 2;
+    grid-row: 5 / span 1;
+    font-size: 20px;
+}
+
+#enterInitialsTextArea {
+    grid-column: 2 / span 1;
+    grid-row: 7 / span 1;
+    font-size: 20px;
+    resize: none;   
+}
+
+#submitScore {
+    grid-column: 3 / span 1;
+    grid-row: 7 / span 1;
+}
+
+#answerCorrectWrongGrid {
+    display: grid;
+    grid-template-columns: 4fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+#answerCorrectWrong {
+    text-align: left;
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 2;
+}
+
+/* Screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    #questionDisplay {
+        font-size: 25px;
+    }
+    .btn {
+        grid-column: 2 / span 2;
+    }
+}
+
+/* Screens smaller than 575px */
+@media screen and  (max-width: 575px) {
+    #mainDiv {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #questionDisplay {
+        grid-column: 2 / span 2;
+        font-size: 15px;
+    }
+}
